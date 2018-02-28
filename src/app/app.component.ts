@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  public navLinks = [
+    {text: 'Signup', link: '/signup', icon: 'person_add'},
+    {text: 'Login', link: '/login', icon: 'input'},
+    {text: 'Training', link: '/training', icon: 'terrain'}
+  ];
 }
