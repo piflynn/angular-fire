@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover, a:active {
+  cursor: pointer;
+  color: lightblue;
+}
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-link-text {
+  display: inline-block;
+  padding-left: .5em;
+}

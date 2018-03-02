@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// core
+import { CoreModule } from './core/core.module';
 // shared
 import { SharedModule } from './shared/shared.module';
 
@@ -23,6 +25,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CoreModule,
     SharedModule,
     AppRoutingModule,
     AuthModule,

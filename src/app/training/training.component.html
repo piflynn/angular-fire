@@ -1,3 +1,17 @@
-<p>
-  training works!
-</p>
+<mat-tab-group *ngIf="!savedTraining">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>add</mat-icon>
+      <span>New</span>
+    </ng-template>
+    <app-new-training (startTrainingEvent)="savedTraining = true"></app-new-training>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>list</mat-icon>
+      <span>Past</span>
+    </ng-template>
+    <app-past-training></app-past-training>
+  </mat-tab>
+</mat-tab-group>
+<app-current-training *ngIf="savedTraining"></app-current-training>

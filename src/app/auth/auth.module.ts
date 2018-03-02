@@ -13,8 +13,6 @@ import { AuthRoutingModule, routingComponents } from './auth.routing';
   declarations: [
     routingComponents
   ],
-  exports: [
-    routingComponents
-  ]
+  providers: []
 })
 export class AuthModule { }

@@ -1,3 +1,18 @@
-<p>
-  current-training works!
-</p>
+<section
+  class="current-training"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="2rem">
+  <button
+    mat-raised-button
+    color="accent"
+    type="button"
+    [disabled]="progress > 0 && progress < 100"
+    (click)="startTraining()">
+    <span *ngIf="progress == 100">RE</span><span>START</span>
+  </button>
+  <mat-progress-spinner
+    mode="determinate"
+    [value]="progress"></mat-progress-spinner>
+  <h1>Progress: {{ progress }}%</h1>
+</section>

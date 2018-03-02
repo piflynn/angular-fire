@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
+import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
+import { HeaderComponent } from './header/header.component';
 
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    SharedModule
+  ],
   declarations: [
-    SidenavComponent,
-    ToolbarComponent
+    SidenavListComponent,
+    HeaderComponent
   ],
   exports: [
-    SidenavComponent,
-    ToolbarComponent
+    SidenavListComponent,
+    HeaderComponent
   ]
 })
-export class NavigationModule { }
+export class NavigationModule {}
